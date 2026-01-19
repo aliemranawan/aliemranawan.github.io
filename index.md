@@ -5,6 +5,8 @@ title: Home
 # Ali Imran Awan  
 ### Oracle Fusion & EBS Technical Consultant
 
+[About Me](about.md) | [Projects](projects.md) | [Blog](blog.md) | [Resume](resume.md)
+
 Oracle Technical Consultant with **12+ years of enterprise experience**, specializing in **Oracle Fusion Cloud** and **Oracle E-Business Suite R12**.  
 Proven expertise in **OIC integrations, REST/SOAP APIs, APEX & OAF development, BI Publisher, OTBI**, and **data migrations (FBDI/HDL)**.
 
