@@ -1,0 +1,9 @@
+title: Ali Imran Awan
+theme: jekyll-theme-minimal
+
+header_pages:
+  - index.md
+  - about.md
+  - projects.md
+  - blog.md
+  - resume.md
