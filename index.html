@@ -1,0 +1,562 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Ali Imran Awan | Senior Oracle Techno-Functional Consultant</title>
+<meta name="description" content="Senior Oracle Techno-Functional Consultant specializing in Oracle EBS R12, Fusion Cloud, and EBS-to-Fusion migration.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --navy: #151A21;
+    --navy-card: #1E2530;
+    --oracle-red: #C74634;
+    --off-white: #F5F4F1;
+    --grey: #8B93A1;
+    --grey-light: #C4C9D1;
+    --line: #2A313D;
+    --font-display: 'Space Grotesk', sans-serif;
+    --font-body: 'Inter', sans-serif;
+    --font-mono: 'JetBrains Mono', monospace;
+  }
+
+  *{ margin:0; padding:0; box-sizing:border-box; }
+
+  html{ scroll-behavior:smooth; }
+
+  body{
+    background: var(--navy);
+    color: var(--off-white);
+    font-family: var(--font-body);
+    line-height:1.6;
+    -webkit-font-smoothing:antialiased;
+  }
+
+  a{ color:inherit; text-decoration:none; }
+
+  :focus-visible{
+    outline: 2px solid var(--oracle-red);
+    outline-offset: 3px;
+  }
+
+  .wrap{
+    max-width: 1080px;
+    margin: 0 auto;
+    padding: 0 28px;
+  }
+
+  h1,h2,h3{ font-family: var(--font-display); letter-spacing:-0.01em; }
+
+  .eyebrow{
+    font-family: var(--font-mono);
+    font-size: 0.72rem;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--oracle-red);
+    margin-bottom: 14px;
+    display:block;
+  }
+
+  /* NAV */
+  nav{
+    position: fixed;
+    top:0; left:0; right:0;
+    z-index: 100;
+    background: rgba(21,26,33,0.88);
+    backdrop-filter: blur(10px);
+    border-bottom: 1px solid var(--line);
+  }
+  .nav-inner{
+    max-width:1080px;
+    margin:0 auto;
+    padding: 16px 28px;
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+  }
+  .nav-logo{
+    font-family: var(--font-mono);
+    font-size: 0.95rem;
+    color: var(--off-white);
+  }
+  .nav-logo span{ color: var(--oracle-red); }
+  .nav-links{
+    display:flex;
+    gap: 28px;
+    font-size: 0.88rem;
+    color: var(--grey-light);
+  }
+  .nav-links a:hover{ color: var(--off-white); }
+  .nav-cta{
+    background: var(--oracle-red);
+    color: var(--off-white) !important;
+    padding: 8px 18px;
+    border-radius: 4px;
+    font-size: 0.85rem;
+    font-weight: 500;
+    white-space:nowrap;
+  }
+  .nav-menu-btn{
+    display:none;
+    background:none;
+    border:none;
+    color: var(--off-white);
+    font-size: 1.4rem;
+    cursor:pointer;
+  }
+
+  @media (max-width: 760px){
+    .nav-links{
+      position:fixed;
+      top:64px; left:0; right:0;
+      background: var(--navy);
+      border-bottom:1px solid var(--line);
+      flex-direction:column;
+      padding: 20px 28px;
+      gap: 16px;
+      display:none;
+    }
+    .nav-links.open{ display:flex; }
+    .nav-menu-btn{ display:block; }
+    .nav-cta{ display:none; }
+  }
+
+  /* HERO */
+  header.hero{
+    padding: 150px 0 100px;
+    border-bottom: 1px solid var(--line);
+  }
+  .hero-grid{
+    display:grid;
+    grid-template-columns: 1.1fr 0.9fr;
+    gap: 60px;
+    align-items:center;
+  }
+  @media (max-width: 860px){
+    .hero-grid{ grid-template-columns: 1fr; }
+  }
+  .hero h1{
+    font-size: clamp(2.1rem, 4vw, 3rem);
+    font-weight: 600;
+    line-height: 1.15;
+    margin-bottom: 18px;
+  }
+  .hero h1 .accent{ color: var(--oracle-red); }
+  .hero p.lede{
+    color: var(--grey-light);
+    font-size: 1.05rem;
+    max-width: 480px;
+    margin-bottom: 32px;
+  }
+  .hero-ctas{ display:flex; gap:14px; flex-wrap:wrap; }
+  .btn{
+    display:inline-block;
+    padding: 12px 24px;
+    border-radius: 4px;
+    font-size: 0.92rem;
+    font-weight: 500;
+    font-family: var(--font-body);
+  }
+  .btn-primary{ background: var(--oracle-red); color:#fff; }
+  .btn-primary:hover{ background:#B03A29; }
+  .btn-secondary{ border: 1px solid var(--line); color: var(--off-white); }
+  .btn-secondary:hover{ border-color: var(--oracle-red); }
+
+  /* TERMINAL */
+  .terminal{
+    background: var(--navy-card);
+    border: 1px solid var(--line);
+    border-radius: 8px;
+    overflow:hidden;
+    box-shadow: 0 30px 60px -20px rgba(0,0,0,0.5);
+  }
+  .terminal-bar{
+    display:flex;
+    gap:8px;
+    padding: 12px 16px;
+    border-bottom: 1px solid var(--line);
+  }
+  .dot{ width:10px; height:10px; border-radius:50%; }
+  .dot.r{ background:#E5544B; }
+  .dot.y{ background:#E5B94B; }
+  .dot.g{ background:#4BC97A; }
+  .terminal-body{
+    padding: 22px 20px;
+    font-family: var(--font-mono);
+    font-size: 0.82rem;
+    color: var(--grey-light);
+    min-height: 220px;
+  }
+  .terminal-body .comment{ color: var(--grey); }
+  .terminal-body .kw{ color: var(--oracle-red); }
+  .terminal-body .result{ color: #4BC97A; }
+  #typed-line::after{
+    content: '|';
+    animation: blink 1s step-end infinite;
+    color: var(--oracle-red);
+  }
+  @keyframes blink{ 50%{ opacity:0; } }
+  @media (prefers-reduced-motion: reduce){
+    #typed-line::after{ animation:none; }
+  }
+
+  /* SECTIONS */
+  section{ padding: 90px 0; border-bottom: 1px solid var(--line); }
+  section:last-of-type{ border-bottom:none; }
+  .section-head{ max-width: 620px; margin-bottom: 48px; }
+  .section-head h2{ font-size: 1.9rem; font-weight:600; }
+  .section-head p{ color: var(--grey-light); margin-top:12px; }
+
+  /* ABOUT */
+  #about .about-body{
+    color: var(--grey-light);
+    max-width: 700px;
+    font-size: 1.02rem;
+  }
+  #about .about-body p{ margin-bottom: 18px; }
+
+  /* EXPERTISE GRID */
+  .expertise-grid{
+    display:grid;
+    grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+    gap: 1px;
+    background: var(--line);
+    border: 1px solid var(--line);
+  }
+  .expertise-card{
+    background: var(--navy);
+    padding: 28px 24px;
+  }
+  .expertise-card h3{
+    font-size: 1rem;
+    font-weight: 600;
+    margin-bottom: 10px;
+    color: var(--off-white);
+  }
+  .expertise-card p{
+    font-size: 0.88rem;
+    color: var(--grey);
+    line-height:1.55;
+  }
+
+  /* TIMELINE */
+  .timeline{ position:relative; padding-left: 28px; }
+  .timeline::before{
+    content:'';
+    position:absolute;
+    left: 5px; top: 6px; bottom: 6px;
+    width: 1px;
+    background: var(--line);
+  }
+  .t-item{ position:relative; padding-bottom: 40px; }
+  .t-item:last-child{ padding-bottom:0; }
+  .t-item::before{
+    content:'';
+    position:absolute;
+    left: -28px; top: 4px;
+    width: 11px; height: 11px;
+    border-radius:50%;
+    background: var(--navy);
+    border: 2px solid var(--oracle-red);
+  }
+  .t-role{ font-weight:600; font-size:1.02rem; color: var(--off-white); }
+  .t-company{ font-family: var(--font-mono); font-size: 0.78rem; color: var(--oracle-red); margin: 4px 0 10px; text-transform:uppercase; letter-spacing:0.06em; }
+  .t-desc{ color: var(--grey-light); font-size: 0.92rem; max-width: 620px; }
+
+  /* ACHIEVEMENTS */
+  .stat-grid{
+    display:grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 24px;
+  }
+  .stat-card{
+    background: var(--navy-card);
+    border: 1px solid var(--line);
+    border-radius: 8px;
+    padding: 32px 28px;
+  }
+  .stat-num{
+    font-family: var(--font-display);
+    font-size: 1.9rem;
+    font-weight: 700;
+    color: var(--oracle-red);
+    margin-bottom: 10px;
+    line-height:1;
+  }
+  .stat-card p{ color: var(--grey-light); font-size: 0.92rem; }
+
+  /* PROJECTS */
+  .project-grid{
+    display:grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 20px;
+  }
+  .project-card{
+    border: 1px solid var(--line);
+    border-radius: 8px;
+    padding: 26px;
+    transition: border-color 0.15s ease;
+  }
+  .project-card:hover{ border-color: var(--oracle-red); }
+  .project-card h3{ font-size: 1rem; font-weight:600; margin-bottom:10px; }
+  .project-card p{ color: var(--grey-light); font-size: 0.9rem; }
+
+  /* CONTACT */
+  #contact{ text-align:center; }
+  #contact h2{ font-size: 2.1rem; margin-bottom: 16px; }
+  #contact p.lede{ color: var(--grey-light); max-width: 480px; margin: 0 auto 36px; }
+  .contact-links{
+    display:flex;
+    justify-content:center;
+    gap: 16px;
+    flex-wrap:wrap;
+  }
+  .contact-links a{
+    border: 1px solid var(--line);
+    padding: 12px 22px;
+    border-radius: 4px;
+    font-size: 0.9rem;
+  }
+  .contact-links a:hover{ border-color: var(--oracle-red); color: var(--oracle-red); }
+
+  footer{
+    padding: 32px 0;
+    text-align:center;
+    font-family: var(--font-mono);
+    font-size: 0.75rem;
+    color: var(--grey);
+  }
+</style>
+</head>
+<body>
+
+<nav>
+  <div class="nav-inner">
+    <div class="nav-logo">ali<span>.</span>awan</div>
+    <button class="nav-menu-btn" id="menuBtn" aria-label="Toggle menu" aria-expanded="false">&#9776;</button>
+    <div class="nav-links" id="navLinks">
+      <a href="#about">About</a>
+      <a href="#expertise">Expertise</a>
+      <a href="#experience">Experience</a>
+      <a href="#achievements">Achievements</a>
+      <a href="#projects">Projects</a>
+      <a href="#contact">Contact</a>
+    </div>
+    <a href="#contact" class="nav-cta">Get in touch</a>
+  </div>
+</nav>
+
+<header class="hero">
+  <div class="wrap hero-grid">
+    <div>
+      <span class="eyebrow">Senior Oracle Techno-Functional Consultant</span>
+      <h1>10+ years turning<br><span class="accent">Oracle systems</span><br>into working solutions.</h1>
+      <p class="lede">EBS R12, Fusion Cloud, and everything in between. I write the PL/SQL, build the integrations, and understand the business process well enough to explain why it matters.</p>
+      <div class="hero-ctas">
+        <a href="#experience" class="btn btn-primary">View experience</a>
+        <a href="#contact" class="btn btn-secondary">Contact me</a>
+      </div>
+    </div>
+    <div class="terminal" role="img" aria-label="Terminal showing a batch process optimized from 24 hours to under 10 minutes">
+      <div class="terminal-bar">
+        <div class="dot r"></div><div class="dot y"></div><div class="dot g"></div>
+      </div>
+      <div class="terminal-body">
+        <div class="comment">-- Ghani Glass, nightly batch process</div>
+        <div><span class="kw">SELECT</span> runtime <span class="kw">FROM</span> batch_log <span class="kw">WHERE</span> run_date = <span class="kw">SYSDATE</span>-1;</div>
+        <br>
+        <div class="comment">-- before optimization</div>
+        <div>RUNTIME: 24:00:00</div>
+        <br>
+        <div class="comment">-- after PL/SQL rewrite</div>
+        <div id="typed-line"></div>
+      </div>
+    </div>
+  </div>
+</header>
+
+<section id="about">
+  <div class="wrap">
+    <div class="section-head">
+      <span class="eyebrow">About</span>
+      <h2>Built for the technical and functional sides of Oracle.</h2>
+    </div>
+    <div class="about-body">
+      <p>I'm a Senior Oracle Techno-Functional Consultant based in Lahore, Pakistan, with over 10 years of experience across Oracle EBS R12 and Oracle Fusion Cloud, covering Finance, HCM, SCM, and CX.</p>
+      <p>My work sits at the intersection of development and function. On the technical side, I write PL/SQL, build integrations in OIC, and work in Oracle Forms and Reports, OAF, APEX, VBCS, and BI Publisher. On the functional side, I understand the business processes well enough to know why a report needs to look a certain way, not just how to build it.</p>
+      <p>I've delivered implementations for manufacturing companies, public sector clients, and organizations across the GCC. I'm currently looking for my next role, with a focus on Oracle EBS, EBS-to-Fusion migration, and Oracle Cloud integration work, open to opportunities globally with a preference for onsite or hybrid arrangements.</p>
+    </div>
+  </div>
+</section>
+
+<section id="expertise">
+  <div class="wrap">
+    <div class="section-head">
+      <span class="eyebrow">Expertise</span>
+      <h2>Where I add the most value.</h2>
+    </div>
+    <div class="expertise-grid">
+      <div class="expertise-card">
+        <h3>Oracle EBS R12</h3>
+        <p>Forms and Reports, Interface tables and APIs, Multi-Org architecture, Workflow and AME, functional configuration across Finance, SCM, and HCM.</p>
+      </div>
+      <div class="expertise-card">
+        <h3>Oracle Fusion Cloud</h3>
+        <p>Finance, HCM, SCM, and CX modules. OTBI and BI Publisher reporting. FBDI and HDL data migration. Page Composer and Application Composer.</p>
+      </div>
+      <div class="expertise-card">
+        <h3>Integration</h3>
+        <p>Oracle Integration Cloud. REST and SOAP API design. BICC extracts. End-to-end integration between EBS, Fusion, and third-party systems.</p>
+      </div>
+      <div class="expertise-card">
+        <h3>Development Tools</h3>
+        <p>PL/SQL, Oracle Forms and Reports, OAF, APEX, VBCS, BI Publisher.</p>
+      </div>
+      <div class="expertise-card">
+        <h3>EBS-to-Fusion Migration</h3>
+        <p>Selection criteria for FBDI vs BICC vs HDL. Legacy interface mapping. Functional gap analysis between EBS and Fusion equivalents.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="experience">
+  <div class="wrap">
+    <div class="section-head">
+      <span class="eyebrow">Experience</span>
+      <h2>Career timeline.</h2>
+    </div>
+    <div class="timeline">
+      <div class="t-item">
+        <div class="t-role">Senior Oracle Technical Consultant</div>
+        <div class="t-company">Azeemi Technologies</div>
+        <p class="t-desc">Delivered technical solutions across Oracle EBS and Fusion Cloud engagements, working on integrations, custom reports, and data migration for enterprise clients. Role ended due to a company-wide layoff.</p>
+      </div>
+      <div class="t-item">
+        <div class="t-role">Oracle Consultant</div>
+        <div class="t-company">Arcana Info</div>
+        <p class="t-desc">Worked on Oracle implementation and support projects, applying both technical development and functional configuration skills across client engagements.</p>
+      </div>
+      <div class="t-item">
+        <div class="t-role">Oracle Apps Developer</div>
+        <div class="t-company">Ghani Glass</div>
+        <p class="t-desc">Built and optimized PL/SQL processes supporting manufacturing operations. Reduced a critical batch process from 24 hours to under 10 minutes.</p>
+      </div>
+      <div class="t-item">
+        <div class="t-role">Assistant Manager IT</div>
+        <div class="t-company">Harris Silicones and Glass</div>
+        <p class="t-desc">Managed IT operations with a focus on Oracle Apps support and internal systems reliability for a manufacturing environment.</p>
+      </div>
+      <div class="t-item">
+        <div class="t-role">IT Executive</div>
+        <div class="t-company">Cotton Web Limited</div>
+        <p class="t-desc">Started my career in core IT operations before moving into Oracle applications work.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="achievements">
+  <div class="wrap">
+    <div class="section-head">
+      <span class="eyebrow">Achievements</span>
+      <h2>Numbers that tell the story.</h2>
+    </div>
+    <div class="stat-grid">
+      <div class="stat-card">
+        <div class="stat-num">24h &rarr; &lt;10min</div>
+        <p>Rebuilt a critical batch process at Ghani Glass using optimized PL/SQL, freeing up operational reporting that used to be a full day behind.</p>
+      </div>
+      <div class="stat-card">
+        <div class="stat-num">10+ years</div>
+        <p>Consistent hands-on delivery across Oracle EBS R12 and Fusion Cloud, spanning Finance, HCM, SCM, and CX for manufacturing, public sector, and GCC clients.</p>
+      </div>
+      <div class="stat-card">
+        <div class="stat-num">2 sides, 1 consultant</div>
+        <p>Equally comfortable writing PL/SQL and explaining the business process behind it, reducing miscommunication between technical and functional teams.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="projects">
+  <div class="wrap">
+    <div class="section-head">
+      <span class="eyebrow">Projects</span>
+      <h2>Selected work.</h2>
+    </div>
+    <div class="project-grid">
+      <div class="project-card">
+        <h3>EBS-to-Fusion Migration Readiness</h3>
+        <p>Analyzed legacy EBS interface tables and mapped them to Fusion equivalents, working through FBDI vs BICC vs HDL selection for different migration scenarios.</p>
+      </div>
+      <div class="project-card">
+        <h3>OIC Integration Design</h3>
+        <p>Designed integration flows in Oracle Integration Cloud connecting Fusion Cloud modules with external and legacy systems, choosing REST or SOAP based on payload and latency needs.</p>
+      </div>
+      <div class="project-card">
+        <h3>PL/SQL Batch Optimization</h3>
+        <p>Rebuilt a manufacturing batch process at Ghani Glass, cutting runtime from 24 hours to under 10 minutes through query optimization and process redesign.</p>
+      </div>
+      <div class="project-card">
+        <h3>BI Publisher and OTBI Reporting</h3>
+        <p>Built bursting reports in BI Publisher and ad hoc dashboards in OTBI for finance and operations stakeholders across EBS and Fusion environments.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="contact">
+  <div class="wrap">
+    <span class="eyebrow">Contact</span>
+    <h2>Let's talk about your next Oracle project.</h2>
+    <p class="lede">Open to Oracle EBS, EBS-to-Fusion migration, and Oracle Cloud Integration roles globally. Onsite and hybrid preferred.</p>
+    <div class="contact-links">
+      <a href="mailto:youremail@example.com">Email me</a>
+      <a href="https://linkedin.com/in/your-profile" target="_blank" rel="noopener">LinkedIn</a>
+      <a href="#">Lahore, Pakistan</a>
+    </div>
+  </div>
+</section>
+
+<footer>&copy; <span id="year"></span> Ali Imran Awan. Built and deployed on GitHub Pages.</footer>
+
+<script>
+  // Mobile nav toggle
+  const menuBtn = document.getElementById('menuBtn');
+  const navLinks = document.getElementById('navLinks');
+  menuBtn.addEventListener('click', () => {
+    const isOpen = navLinks.classList.toggle('open');
+    menuBtn.setAttribute('aria-expanded', isOpen);
+  });
+  navLinks.querySelectorAll('a').forEach(link => {
+    link.addEventListener('click', () => navLinks.classList.remove('open'));
+  });
+
+  // Footer year
+  document.getElementById('year').textContent = new Date().getFullYear();
+
+  // Terminal typing effect
+  const el = document.getElementById('typed-line');
+  const finalText = 'RUNTIME: 00:09:47';
+  const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+  if (reduceMotion) {
+    el.innerHTML = '<span class="result">' + finalText + '</span>';
+  } else {
+    let i = 0;
+    function type() {
+      if (i <= finalText.length) {
+        el.innerHTML = '<span class="result">' + finalText.slice(0, i) + '</span>';
+        i++;
+        setTimeout(type, 60);
+      }
+    }
+    // Start once terminal is roughly in view or after a short delay
+    setTimeout(type, 900);
+  }
+</script>
+
+</body>
+</html>
