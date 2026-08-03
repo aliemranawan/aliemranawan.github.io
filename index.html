@@ -322,6 +322,25 @@
     transition: border-color 0.15s ease;
   }
   .project-card:hover{ border-color: var(--oracle-red); }
+  .project-diagram{
+  width: 100%;
+  border-radius: 6px;
+  overflow: hidden;
+  margin-bottom: 16px;
+  border: 1px solid var(--line);
+}
+.project-diagram img{
+  width: 100%;
+  display: block;
+}
+.project-link{
+  display: inline-block;
+  margin-top: 14px;
+  font-family: var(--font-mono);
+  font-size: 0.8rem;
+  color: var(--oracle-red);
+}
+.project-link:hover{ text-decoration: underline; }
   .project-card h3{ font-size: 1rem; font-weight:600; margin-bottom:10px; }
   .project-card p{ color: var(--grey-light); font-size: 0.9rem; }
 
@@ -515,23 +534,41 @@
       <h2>Selected work.</h2>
     </div>
     <div class="project-grid">
-      <div class="project-card">
-        <h3>EBS-to-Fusion Migration Readiness</h3>
-        <p>Analyzed legacy EBS interface tables and mapped them to Fusion equivalents, working through FBDI vs BICC vs HDL selection for different migration scenarios.</p>
-      </div>
-      <div class="project-card">
-        <h3>OIC Integration Design</h3>
-        <p>Designed integration flows in Oracle Integration Cloud connecting Fusion Cloud modules with external and legacy systems, choosing REST or SOAP based on payload and latency needs.</p>
-      </div>
-      <div class="project-card">
-        <h3>PL/SQL Batch Optimization</h3>
-        <p>Rebuilt a manufacturing batch process at Ghani Glass, cutting runtime from 24 hours to under 10 minutes through query optimization and process redesign.</p>
-      </div>
-      <div class="project-card">
-        <h3>BI Publisher and OTBI Reporting</h3>
-        <p>Built bursting reports in BI Publisher and ad hoc dashboards in OTBI for finance and operations stakeholders across EBS and Fusion environments.</p>
-      </div>
+  <div class="project-card">
+    <div class="project-diagram">
+      <img src="assets/ebs-to-fusion-migration-readiness.svg" alt="EBS-to-Fusion migration decision flow: legacy interface tables through FBDI, BICC, or HDL to Fusion target objects">
     </div>
+    <h3>EBS-to-Fusion Migration Readiness</h3>
+    <p>Analyzed legacy EBS interface tables and mapped them to Fusion equivalents, working through FBDI vs BICC vs HDL selection for different migration scenarios.</p>
+    <a href="https://github.com/aliemranawan/fbdi-hdl-migration-templates" class="project-link" target="_blank" rel="noopener">View repo &rarr;</a>
+  </div>
+
+  <div class="project-card">
+    <div class="project-diagram">
+      <img src="assets/oic-integration-design.svg" alt="OIC integration flow between Fusion Cloud and external or legacy systems, with REST vs SOAP protocol decision">
+    </div>
+    <h3>OIC Integration Design</h3>
+    <p>Designed integration flows in Oracle Integration Cloud connecting Fusion Cloud modules with external and legacy systems, choosing REST or SOAP based on payload and latency needs.</p>
+    <a href="https://github.com/aliemranawan/oic-integration-reference" class="project-link" target="_blank" rel="noopener">View repo &rarr;</a>
+  </div>
+
+  <div class="project-card">
+    <div class="project-diagram">
+      <img src="assets/plsql-batch-optimization.svg" alt="Before and after comparison of a PL/SQL batch process, showing runtime reduced from 24 hours to under 10 minutes">
+    </div>
+    <h3>PL/SQL Batch Optimization</h3>
+    <p>Rebuilt a manufacturing batch process at Ghani Glass, cutting runtime from 24 hours to under 10 minutes through query optimization and process redesign.</p>
+    <a href="https://github.com/aliemranawan/plsql-performance-tuning-templates" class="project-link" target="_blank" rel="noopener">View repo &rarr;</a>
+  </div>
+
+  <div class="project-card">
+    <div class="project-diagram">
+      <img src="assets/bip-otbi-reporting.svg" alt="Data flow from EBS and Fusion into BI Publisher bursting reports and OTBI ad hoc dashboards">
+    </div>
+    <h3>BI Publisher and OTBI Reporting</h3>
+    <p>Built bursting reports in BI Publisher and ad hoc dashboards in OTBI for finance and operations stakeholders across EBS and Fusion environments.</p>
+  </div>
+</div>
   </div>
 </section>
 
