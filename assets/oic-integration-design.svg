@@ -1,0 +1,68 @@
+<svg viewBox="0 0 900 560" xmlns="http://www.w3.org/2000/svg" font-family="Inter, Arial, sans-serif">
+  <rect width="900" height="560" fill="#1E2530"/>
+
+  <text x="450" y="42" text-anchor="middle" font-size="22" font-weight="700" fill="#F5F4F1">OIC Integration Design</text>
+  <text x="450" y="66" text-anchor="middle" font-size="13" fill="#8B93A1">Fusion Cloud &#8596; OIC &#8596; external and legacy systems</text>
+
+  <!-- Fusion box -->
+  <rect x="40" y="140" width="200" height="100" rx="8" fill="#151A21" stroke="#2A313D" stroke-width="1"/>
+  <text x="140" y="170" text-anchor="middle" font-size="15" font-weight="700" fill="#F5F4F1">Fusion Cloud</text>
+  <text x="140" y="192" text-anchor="middle" font-size="12" fill="#C4C9D1">Source / target</text>
+  <text x="140" y="210" text-anchor="middle" font-size="12" fill="#C4C9D1">modules</text>
+
+  <!-- OIC center -->
+  <rect x="350" y="120" width="200" height="140" rx="10" fill="#151A21" stroke="#C74634" stroke-width="2.5"/>
+  <text x="450" y="150" text-anchor="middle" font-size="15" font-weight="700" fill="#C74634">OIC</text>
+  <text x="450" y="172" text-anchor="middle" font-size="11.5" fill="#F5F4F1">Protocol selection</text>
+  <text x="450" y="190" text-anchor="middle" font-size="11.5" fill="#C4C9D1">Transformation / mapping</text>
+  <text x="450" y="208" text-anchor="middle" font-size="11.5" fill="#C4C9D1">Fault handling / retry</text>
+  <text x="450" y="226" text-anchor="middle" font-size="11.5" fill="#C4C9D1">Orchestration</text>
+
+  <!-- External/legacy box -->
+  <rect x="660" y="140" width="200" height="100" rx="8" fill="#151A21" stroke="#2A313D" stroke-width="1"/>
+  <text x="760" y="170" text-anchor="middle" font-size="15" font-weight="700" fill="#F5F4F1">External / Legacy</text>
+  <text x="760" y="192" text-anchor="middle" font-size="12" fill="#C4C9D1">EBS, third-party</text>
+  <text x="760" y="210" text-anchor="middle" font-size="12" fill="#C4C9D1">SaaS platforms</text>
+
+  <!-- Arrows -->
+  <line x1="240" y1="180" x2="345" y2="180" stroke="#C74634" stroke-width="2.5" marker-end="url(#arrow2)"/>
+  <line x1="345" y1="210" x2="240" y2="210" stroke="#8B93A1" stroke-width="1.5" marker-end="url(#arrowgray)"/>
+  <line x1="555" y1="180" x2="655" y2="180" stroke="#C74634" stroke-width="2.5" marker-end="url(#arrow2)"/>
+  <line x1="655" y1="210" x2="555" y2="210" stroke="#8B93A1" stroke-width="1.5" marker-end="url(#arrowgray)"/>
+
+  <!-- Decision branch line down -->
+  <line x1="450" y1="260" x2="450" y2="310" stroke="#8B93A1" stroke-width="1.5" stroke-dasharray="3,3"/>
+
+  <!-- REST vs SOAP boxes -->
+  <rect x="130" y="330" width="300" height="150" rx="8" fill="#151A21" stroke="#C74634" stroke-width="1.5"/>
+  <text x="280" y="358" text-anchor="middle" font-size="14" font-weight="700" fill="#C74634">REST</text>
+  <text x="280" y="382" text-anchor="middle" font-size="11.5" fill="#F5F4F1">Flat / shallow JSON payloads</text>
+  <text x="280" y="400" text-anchor="middle" font-size="11.5" fill="#C4C9D1">Latency-sensitive, high frequency</text>
+  <text x="280" y="418" text-anchor="middle" font-size="11.5" fill="#C4C9D1">New integration, no legacy contract</text>
+  <text x="280" y="436" text-anchor="middle" font-size="11.5" fill="#C4C9D1">HTTP status + JSON error handling</text>
+  <text x="280" y="454" text-anchor="middle" font-size="11.5" fill="#C4C9D1">Modern SaaS targets</text>
+
+  <rect x="470" y="330" width="300" height="150" rx="8" fill="#151A21" stroke="#C74634" stroke-width="1.5"/>
+  <text x="620" y="358" text-anchor="middle" font-size="14" font-weight="700" fill="#C74634">SOAP</text>
+  <text x="620" y="382" text-anchor="middle" font-size="11.5" fill="#F5F4F1">Deep, strictly-typed XSD contracts</text>
+  <text x="620" y="400" text-anchor="middle" font-size="11.5" fill="#C4C9D1">Existing production service</text>
+  <text x="620" y="418" text-anchor="middle" font-size="11.5" fill="#C4C9D1">WS-Security / built-in validation</text>
+  <text x="620" y="436" text-anchor="middle" font-size="11.5" fill="#C4C9D1">SOAP fault-based error handling</text>
+  <text x="620" y="454" text-anchor="middle" font-size="11.5" fill="#C4C9D1">Legacy EBS-side services</text>
+
+  <line x1="410" y1="310" x2="280" y2="330" stroke="#8B93A1" stroke-width="1.5" stroke-dasharray="3,3"/>
+  <line x1="490" y1="310" x2="620" y2="330" stroke="#8B93A1" stroke-width="1.5" stroke-dasharray="3,3"/>
+
+  <text x="450" y="310" text-anchor="middle" font-size="11" font-weight="700" fill="#8B93A1">chosen by payload + latency + contract</text>
+
+  <text x="450" y="530" text-anchor="middle" font-size="11" fill="#5A6472" font-family="monospace">github.com/aliemranawan/oic-integration-reference</text>
+
+  <defs>
+    <marker id="arrow2" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto" markerUnits="strokeWidth">
+      <path d="M0,0 L8,3 L0,6" fill="#C74634"/>
+    </marker>
+    <marker id="arrowgray" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto" markerUnits="strokeWidth">
+      <path d="M8,0 L0,3 L8,6" fill="#8B93A1"/>
+    </marker>
+  </defs>
+</svg>
